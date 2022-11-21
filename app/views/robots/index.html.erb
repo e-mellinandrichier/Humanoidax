@@ -1,0 +1,10 @@
+<h1>Robots</h1>
+
+<% @robots.each do |robot| %>
+  <ul>
+    <li> <%= link_to robot.name, robot_path(robot)%> </li>
+  </ul>
+  <p> <%= robot.image %> </p>
+  <p> <%= robot.utility %> </p>
+  <p> <%= robot.description %> </p>
+<% end %>
