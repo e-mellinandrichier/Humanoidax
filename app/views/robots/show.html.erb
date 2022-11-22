@@ -4,5 +4,10 @@
 <%= cl_image_tag @robot.photo.key, height: 300, width: 400, crop: :fill %>
 <p> <%= @robot.utility %> </p>
 <p> <%= @robot.description %> </p>
+<p><%= link_to "Edit Robot", edit_robot_path(@robot) %></p>
 
 <p><%= link_to "Back to Robots", robots_path %></p>
+<%= link_to "Delete",
+  robot_path(@robot),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
