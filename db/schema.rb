@@ -55,6 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_112949) do
 
   create_table "robots", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.string "utility"
     t.text "description"
     t.bigint "user_id", null: false

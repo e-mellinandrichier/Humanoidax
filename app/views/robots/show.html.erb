@@ -6,3 +6,7 @@
 <p> <%= @robot.description %> </p>
 
 <p><%= link_to "Back to Robots", robots_path %></p>
+<%= link_to "Delete",
+  robot_path(@robot),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
