@@ -28,6 +28,7 @@ class RobotsController < ApplicationController
     @robot.destroy
     # No need for app/views/restaurants/destroy.html.erb
     redirect_to robots_path, status: :see_other
+  end
 
   def edit
   end
@@ -35,7 +36,6 @@ class RobotsController < ApplicationController
   def update
     @robot.update(robot_params)
     redirect_to robot_path(@robot)
-
   end
 
   private
