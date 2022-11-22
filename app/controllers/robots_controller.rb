@@ -1,5 +1,6 @@
-
+require "pry-byebug"
 class RobotsController < ApplicationController
+
   before_action :set_robot, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -24,7 +25,7 @@ class RobotsController < ApplicationController
 
   def destroy
     @robot.destroy
-    # No need for app/views/restaurants/destroy.html.erb
+    # No need  app/views/restaurants/destroy.html.erb
     redirect_to robots_path, status: :see_other
   end
 

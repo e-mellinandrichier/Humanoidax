@@ -18,8 +18,9 @@
     <li> <%= link_to robot.name, robot_path(robot)%> </li>
   </ul>
 
+ <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill %>
+
   <p> <%= robot.utility %> </p>
-  <p> <%= robot.description %> </p>
 <% end %>
 
 <%= link_to "Ajouter un robot", new_robot_path %>
