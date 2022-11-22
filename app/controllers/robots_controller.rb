@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 class RobotsController < ApplicationController
   def index
     @robots = Robot.all
@@ -21,8 +23,14 @@ class RobotsController < ApplicationController
     end
   end
 
-  def show
+  def edit
     @robot = Robot.find(params[:id])
+  end
+
+  def update
+    @robot = Robot.find(params[:id])
+    @robot.update(robot_params)
+    redirect_to robot_path(@robot)
   end
 
   private
