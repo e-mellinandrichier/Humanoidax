@@ -9,4 +9,4 @@
 User.destroy_all
 Robot.destroy_all
 user1 = User.create(email: "email@gmail.com", password: "motdepasse")
-Robot.create( name: "Lil Miquela", image: "../../../assets/images/lil_miquela_cover_8342.webp",utility: "influenceuse", description: "Lil Miquela va vous faire des posts insta et augmenter vos followers !", user: user1)s
+Robot.create( name: "Lil Miquela", image: "../../../assets/images/lil_miquela_cover_8342.webp",utility: "influenceuse", description: "Lil Miquela va vous faire des posts insta et augmenter vos followers !", user: user1)
