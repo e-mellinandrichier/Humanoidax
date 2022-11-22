@@ -3,21 +3,22 @@ class RobotsController < ApplicationController
     @robots = Robot.all
   end
 
+  def show
+    @robot = Robot.find(params[:id])
+  end
+
   def new
     @robot = Robot.new
   end
 
   def create
     @robot = Robot.new(robot_params)
+    @robot.user = current_user
     if @robot.save
-      redirect_to robots_path
+      redirect_to robot_path(@robot)
     else
-      render "new"
+      render "new", status: :unprocessable_entity
     end
-  end
-
-  def show
-    @robot = Robot.find(params[:id])
   end
 
   private

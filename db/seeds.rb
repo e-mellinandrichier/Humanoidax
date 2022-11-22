@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.destroy_all
 Robot.destroy_all
+User.destroy_all
 user1 = User.create(email: "email@gmail.com", password: "motdepasse")
-  Robot.create( name: "Lil Miquela", image: "../../../assets/images/lil_miquela_cover_8342.webp",utility: "influenceuse", description: "Lil Miquela va vous faire des posts insta et augmenter vos followers !", user: user1)
+  Robot.create( name: "Lil Miquela", image: "../../../assets/images/lil_miquela_cover_8342.webp", utility: "influenceuse", description: "Lil Miquela va vous faire des posts insta et augmenter vos followers !", user: user1)
