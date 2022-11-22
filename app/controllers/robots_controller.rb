@@ -1,4 +1,3 @@
-require 'pry-byebug'
 
 class RobotsController < ApplicationController
   def index
