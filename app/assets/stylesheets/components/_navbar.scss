@@ -3,10 +3,44 @@
   background: white;
 }
 
+.navbar {
+  box-shadow: 0px 4px 4px rgba(167, 164, 164, 0.25);
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  box-shadow: 0px 4px 4px rgba(167, 164, 164, 0.25);
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 80px;
+}
+
+.container-fluid {
+  width: 1000px;
+}
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-link {
+  text-align: left;
+  width: 150px;
+  font-size: small;
+}
+.avatar {
+  border: 2px solid #c9c5c5;
+}
+
+.navbar-collapse {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.login {
+position: absolute;
+width: 163px;
+height: 15px;
+left: 1082px;
+top: 106px;
 }
