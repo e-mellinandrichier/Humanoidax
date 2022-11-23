@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 24px;
+  flex-wrap: wrap;
 }
 
 .cards-products {
@@ -17,6 +18,7 @@
   flex-direction: column;
   width: 400px;
   height: 500px;
+  margin: 10px;
   h5{
     color: #ff90e8;
     font-family: Lora;
