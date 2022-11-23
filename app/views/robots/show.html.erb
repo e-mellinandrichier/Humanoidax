@@ -10,11 +10,11 @@
     </div>
   </div>
 
-  <p><%= link_to "Edit Robot", edit_robot_path(@robot) %></p>
+  <p class ="animated-link"><%= link_to "Edit Robot", edit_robot_path(@robot) %></p>
 
-  <p><%= link_to "Back to Robots", robots_path %></p>
-  <%= link_to "Delete",
+  <p class ="animated-link"><%= link_to "Back to Robots", robots_path %></p>
+  <p class ="animated-link"><%= link_to "Delete",
     robot_path(@robot),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
+  %></p>
 </div>
