@@ -11,23 +11,6 @@
 </div>
 
 
-<body>
-<h1>Robots</h1>
-<%# <% @robots.each do |robot| %>
-  <%# <ul> %>
-    <%# <li> <%= link_to robot.name, robot_path(robot)%>
-  <%# </ul> %>
-
- <%# <%= cl_image_tag robot.photo.key %>
-
-  <%# <p> <%= robot.utility %>
-<%# <% end %>
-
-<%= link_to "Ajouter un robot", new_robot_path %>
-
-</body>
-
-
 <div class="card_container">
   <% @robots.each do |robot| %>
       <%= link_to robot_path(robot), class: "mylink" do %>
