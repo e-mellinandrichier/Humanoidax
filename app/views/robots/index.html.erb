@@ -14,7 +14,22 @@
   <% @robots.each do |robot| %>
       <%= link_to robot_path(robot), class: "mylink" do %>
           <div class="card-product">
-            <%= cl_image_tag robot.photo, height: 300, width: 400, crop: :fill, class:"card-img" %>
+            <%= cl_image_tag robot.photo.url, height: 300, width: 400, crop: :fill, class:"card-img" %>
+                <div class="card-product-infos">
+                  <h5> <%= robot.name %> </h5>
+                  <p> <%= robot.utility %> <p>
+                  <p> <%= robot.description %> </p>
+                </div>
+          </div>
+      <% end %>
+    <% end %>
+</div>
+
+<div class="card_container">
+  <% @robots.each do |robot| %>
+      <%= link_to robot_path(robot), class: "mylink" do %>
+          <div class="card-product">
+            <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
                 <div class="card-product-infos">
                   <h5> <%= robot.name %> </h5>
                   <p> <%= robot.utility %> <p>
