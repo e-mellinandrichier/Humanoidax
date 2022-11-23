@@ -1,8 +1,8 @@
 .simple_form {
   margin: 34px;
-  padding: 132px;
+  padding: 71px;
   border-radius: 50px;
-  font-weight: lora;
+  font-family: lora;
   background-color: #ff90e8;
   width: 50%;
   display: flex;
@@ -20,7 +20,8 @@
 }
 
 .container {
-    margin-left: 25%;
+   display:flex;
+   justify-content: center;
 }
 
 
