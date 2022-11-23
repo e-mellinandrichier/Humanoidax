@@ -24,3 +24,33 @@ h1 {
   display: inline-block;
   color: red;
 }
+.animated-link {
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.animated-link {
+  display: inline-block;
+  background-color: #ff90e8;
+  font-family: "Picnic";
+  color:  #333;
+  border: px solid #333;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+  transform 0,15s ease-out,
+  color 0,15s ease-out,
+  background-color 0,15s ease-out;
+}
+.animated-link:hover {
+  transform: translate(-6px, -6px);
+  color: $light-white;
+  background: black;
+
+}
