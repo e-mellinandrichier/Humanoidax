@@ -13,15 +13,15 @@
 
 <body>
 <h1>Robots</h1>
-<% @robots.each do |robot| %>
-  <ul>
-    <li> <%= link_to robot.name, robot_path(robot)%> </li>
-  </ul>
+<%# <% @robots.each do |robot| %>
+  <%# <ul> %>
+    <%# <li> <%= link_to robot.name, robot_path(robot)%>
+  <%# </ul> %>
 
- <%= cl_image_tag robot.photo.key %>
+ <%# <%= cl_image_tag robot.photo.key %>
 
-  <p> <%= robot.utility %> </p>
-<% end %>
+  <%# <p> <%= robot.utility %>
+<%# <% end %>
 
 <%= link_to "Ajouter un robot", new_robot_path %>
 
