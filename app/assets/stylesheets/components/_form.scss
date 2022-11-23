@@ -1,0 +1,29 @@
+.simple_form {
+  margin: 34px;
+  padding: 132px;
+  border-radius: 50px;
+  font-weight: lora;
+  background-color: #ff90e8;
+  width: 50%;
+  display: flex;
+  align-content: flex-end;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  h2 {
+    font-size: 40px;
+    color: black;
+    font-family: 'Picnic';
+  }
+
+}
+
+.container {
+    margin-left: 25%;
+}
+
+
+.mb-3 {
+  font-family: Lora;
+}
