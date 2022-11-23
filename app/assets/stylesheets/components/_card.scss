@@ -10,11 +10,19 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 30px;
   border-radius: 7px;
   background-color: $light-white;
   flex-direction: column;
+  h5{
+    color: #ff90e8;
+    font-family: "Picnic";
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: bold;
+  }
 }
 
 
@@ -28,7 +36,7 @@
   font-weight: bold;
   margin: 0;
   text-decoration: none !important;
-  color: black;
+  color: $light-white;
 }
 
 .card-product-infos {

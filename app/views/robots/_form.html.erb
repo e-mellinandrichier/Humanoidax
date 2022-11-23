@@ -1,7 +1,15 @@
+
+<div class="container">
 <%= simple_form_for(robot) do |f| %>
+  <h2> Robot informations </h2>
+  <br>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
   <%= f.input :utility %>
   <%= f.input :description %>
-  <%= f.submit %>
+  <br>
+  <%= f.submit class: "animated-link" %>
+
 <% end %>
+
+</div>
