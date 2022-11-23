@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 70px;
 }
 
 .navbar {
@@ -17,7 +18,7 @@
 }
 
 .container-fluid {
-  width: 1000px;
+  width: 1300px;
 }
 .navbar-nav {
   align-items: center;
@@ -25,16 +26,20 @@
 
 .nav-link {
   text-align: left;
-  width: 150px;
-  font-size: small;
+  width: 79px;
+  font-size:xx-small;
 }
 .avatar {
-  border: 2px solid #c9c5c5;
+  width: 28px;
 }
 
 .navbar-collapse {
   background: rgb(255, 255, 255);
   border-radius: 10px;
+
+}
+.collapse {
+  padding-right: 10px;
 }
 
 .login {
@@ -43,4 +48,6 @@ width: 163px;
 height: 15px;
 left: 1082px;
 top: 106px;
+color:rgba(52, 50, 50, 0.25);
+font-size: medium;
 }
