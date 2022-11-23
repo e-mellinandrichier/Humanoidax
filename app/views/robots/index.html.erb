@@ -11,6 +11,8 @@
 </div>
 
 
+
+
 <div class="card_container">
   <% @robots.each do |robot| %>
       <%= link_to robot_path(robot), class: "mylink" do %>
@@ -26,3 +28,4 @@
       <% end %>
     <% end %>
 </div>
+<%= link_to "Ajouter un robot", new_robot_path %>
