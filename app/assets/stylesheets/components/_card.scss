@@ -10,13 +10,21 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 30px;
   border-radius: 7px;
   background-color: $light-white;
   flex-direction: column;
   width: 400px;
   height: 500px;
+  h5{
+    color: #ff90e8;
+    font-family: "Picnic";
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: bold;
+  }
 }
 
 .card-img {
@@ -27,7 +35,7 @@
   font-size: 14px;
   font-weight: bold;
   text-decoration: none !important;
-  color: black;
+  color: $light-white;
 }
 
 .cards-products-infos {
