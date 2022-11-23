@@ -1,4 +1,3 @@
-require "pry-byebug"
 class RobotsController < ApplicationController
 
   before_action :set_robot, only: [:show, :edit, :update, :destroy]

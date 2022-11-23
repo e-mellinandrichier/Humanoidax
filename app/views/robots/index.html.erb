@@ -12,6 +12,7 @@
 
 </div>
 
+
 </header>
 
 <body>
@@ -23,11 +24,11 @@
           <div class="card-product">
             <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
                 <div class="card-product-infos">
+
                   <h5> <%= robot.name.capitalize %> </h5>
                   <br>
                   <h6> <%= robot.utility.capitalize %> </h6>
                   <p> <%= robot.description.capitalize %> </p>
-
                 </div>
           </div>
       <% end %>
@@ -36,3 +37,4 @@
 
 
 </body>
+
