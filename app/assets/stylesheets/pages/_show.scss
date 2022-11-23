@@ -1,0 +1,26 @@
+h1 {
+  color: black;
+  margin: 10px;
+}
+
+.show-container {
+  padding: 24px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  padding: 30px;
+  border-radius: 7px;
+  background-color: $light-white;
+}
+
+.show-img {
+  border-radius: 7px;
+  margin: 20px;
+}
+
+.show-ud {
+  font-size: larger;
+  display: inline-block;
+  color: red;
+}

@@ -1,20 +1,25 @@
 
-
 <div class="banner">
 
   <div class="container">
    <h2> Avec Humanoïdax </h2>
    <br>
+
    <h4> Partage ou emprunte ton robot </h4>
+
+   <h4> Partage ou emprunte ton robots </h4>
+   <br>
+   <%=link_to "Add a new Robot" , new_robot_path, class: "animated-link"%>
+
   </div>
 
 </div>
 
 
-<body>
 <div class="container2">
 
 <%= link_to "Ajouter un robot", new_robot_path %>
+
 
 <div class="card_container">
   <% @robots.each do |robot| %>
@@ -24,13 +29,21 @@
               <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
             </div>
                 <div class="card-product-infos">
+
                   <h5> <%= robot.name %> </h5>
                   <p> <%= robot.utility %> <p>
                   <p> <%= robot.description %> </p>
+
+
+                  <h5> <%= robot.name.capitalize %> </h5>
+                  <br>
+                  <h6> <%= robot.utility.capitalize %> </h6>
+                  <p> <%= robot.description.capitalize %> </p>
+
                 </div>
           </div>
       <% end %>
     <% end %>
 </div>
+
 </div>
-</body>
