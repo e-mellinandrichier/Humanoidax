@@ -18,7 +18,7 @@
     <li> <%= link_to robot.name, robot_path(robot)%> </li>
   </ul>
 
- <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill %>
+ <%= cl_image_tag robot.photo.key %>
 
   <p> <%= robot.utility %> </p>
 <% end %>

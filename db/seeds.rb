@@ -19,8 +19,3 @@ robot2 = Robot.new(name: "Inès", utility: "front-end dev", description: "Va vou
 robot2.photo.attach(io: file1, filename: "ines.png", content_type: "image/png")
 robot2.user = user1
 robot2.save
-
-booking1 = Booking.new(date_first: "18/05/2023", date_end: "19/06/2023")
-booking1.user = user2
-booking1.robot = robot1
-booking1.save
