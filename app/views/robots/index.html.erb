@@ -13,21 +13,8 @@
 
 <body>
 <div class="container2">
-<h1>Robots</h1>
-<%# <% @robots.each do |robot| %>
-  <%# <ul> %>
-    <%# <li> <%= link_to robot.name, robot_path(robot)%>
-  <%# </ul> %>
-
- <%# <%= cl_image_tag robot.photo.key %>
-
-  <%# <p> <%= robot.utility %>
-<%# <% end %>
 
 <%= link_to "Ajouter un robot", new_robot_path %>
-
-
-
 
 <div class="card_container">
   <% @robots.each do |robot| %>
