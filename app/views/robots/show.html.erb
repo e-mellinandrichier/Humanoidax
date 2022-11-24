@@ -22,6 +22,7 @@
 
 <% @bookings.each do |booking| %>
   <h5> Début : <%= booking.date_first%> </h5>
+
   <h5> Fin : <%= booking.date_end %> </h5>
   <p class ="animated-link">
 
@@ -29,5 +30,6 @@
     booking_path(booking),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
+
 <% end %>
   </p>

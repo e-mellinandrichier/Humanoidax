@@ -1,23 +1,29 @@
 
 <div class="banner">
-
   <div class="container1">
+
    <h2> Avec Humanoïdax </h2>
    <br>
    <h4> Partage ou emprunte ton robot </h4>
    <br>
-   <%=link_to "Add a new Robot" , new_robot_path, class: "animated-link"%>
 
+    <div class="search-barre">
+      <%= form_with url: robots_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find your robot"
+        %>
+        <%= submit_tag "Search", class: "animated-link" %>
+      <% end %>
+    </div>
   </div>
-
 </div>
 
 <div class="container2">
-
-
-
-<div class="card_container">
-  <% @robots.each do |robot| %>
+   <%=link_to "Add a new Robot" , new_robot_path, class: "animated-link"%>
+  <div class="card_container">
+    <% @robots.each do |robot| %>
           <div class="cards-products">
             <div class="card-product">
             <%= link_to robot_path(robot), class: "mylink" do %>
@@ -37,4 +43,3 @@
 
 </div>
 
-<h1>Mes réservations</h1>
