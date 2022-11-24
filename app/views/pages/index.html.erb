@@ -1,0 +1,34 @@
+<h1>Hello <%= @user.email %> ! </h1>
+<%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669131989/EM_LA_BELLE_sqrqgt.jpg" %>
+<h2>Tes Robots :
+<% @robots.each do |robot| %>
+          <div class="cards-products">
+            <div class="card-product">
+            <%= link_to robot_path(robot), class: "mylink" do %>
+            <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
+            </div>
+                <div class="card-product-infos">
+                  <h5> <%= robot.name.capitalize %> </h5>
+                  <br>
+                  <h6> <%= robot.utility.capitalize %> </h6>
+                  <p> <%= robot.description.capitalize %> </p>
+
+                </div>
+          </div>
+      <% end %>
+    <% end %>
+</h2>
+<h2> Tes réservations :</h2>
+<% @bookings.each do |booking| %>
+  <h5> Début : <%= booking.date_first%> </h5>
+
+  <h5> Fin :  <%= booking.date_end %> </h5>
+  <p class ="animated-link"><%= link_to "Edit booking", edit_booking_path(booking) %></p>
+  <p class ="animated-link">
+
+  <%= link_to "Delete",
+    booking_path(booking),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+<% end %>
+  </p>

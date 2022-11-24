@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+
     @robot = Robot.find(params[:robot_id])
     @booking.robot = @robot
     if @booking.save
