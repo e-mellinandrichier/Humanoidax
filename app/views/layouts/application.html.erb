@@ -12,7 +12,7 @@
   </head>
 
   <body>
-  <%= render "devise/shared/navbar" %>
+  <%= render "devise/shared/navbar", except: :home %>
     <%= yield %>
     <%= render "devise/shared/flashes" %>
   </body>
