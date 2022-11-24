@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:destroy, :show]
-  before_action :set_robot, only: [:new, :create, :edit, :update]
+  before_action :set_booking, only: [:destroy, :show, :edit, :update]
+  before_action :set_robot, only: [:new, :create]
   def index
     @bookings = Booking.all
   end
@@ -15,7 +15,8 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.robot = set_robot
+    @robot = Robot.find(params[:robot_id])
+    @booking.robot = @robot
     if @booking.save
       redirect_to robot_path(@robot)
     else
@@ -32,10 +33,12 @@ class BookingsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
-
+    @booking.update(booking_params)
+    redirect_to robot_path
   end
 
   private
