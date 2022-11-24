@@ -1,7 +1,9 @@
-<%= simple_form_for(booking) do |f| %>
+<%= simple_form_for [@robot, @booking] do |f| %>
   <h2> Informations de réservations</h2>
   <br>
   <%= f.input :date_first, as: :date %>
   <%= f.input :date_end, as: :date %>
+
   <br>
   <%= f.submit class: "animated-link" %>
+<% end %>

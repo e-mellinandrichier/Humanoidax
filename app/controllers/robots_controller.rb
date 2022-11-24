@@ -9,9 +9,13 @@ class RobotsController < ApplicationController
     else
       @robots = Robot.all
     end
+    @bookings = Booking.all
   end
 
-  def show; end
+  def show
+    @bookings = Booking.all
+
+  end
 
   def new
     @robot = Robot.new

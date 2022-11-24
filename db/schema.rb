@@ -43,8 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_112949) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.string "date_first"
-    t.string "date_end"
+    t.date "date_first"
+    t.date "date_end"
     t.bigint "user_id", null: false
     t.bigint "robot_id", null: false
     t.datetime "created_at", null: false
@@ -55,7 +55,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_112949) do
 
   create_table "robots", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.string "utility"
     t.text "description"
     t.bigint "user_id", null: false
