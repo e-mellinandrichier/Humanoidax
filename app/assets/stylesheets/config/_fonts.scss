@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
 // Define fonts for body and headers
-$body-font: "Lora", "sans-serif";
-$headers-font: "Lora", ;
+$body-font: 'Space Mono', monospace;
+$headers-font: 'Space Mono', monospace;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -43,4 +43,9 @@ $headers-font: "Lora", ;
 @font-face {
   font-family: 'Steps';
   src: url(../../fonts/Steps-Mono.otf) format('otf')
+}
+
+a {
+  color: #0e0000 !important;
+  text-decoration: none !important;
 }
