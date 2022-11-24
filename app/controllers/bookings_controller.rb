@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   before_action :set_booking, only: [:destroy, :show]
   before_action :set_robot, only: [:new, :create, :edit, :update]
   def index
@@ -25,17 +24,18 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking = set_booking
     @booking.destroy
     # No need  app/views/restaurants/destroy.html.erb
-    redirect_to robot_bookings_path, status: :see_other
+    # redirect_to robot_bookings_path, status: :see_other
+    redirect_to robot_path
   end
 
   def edit
   end
 
   def update
-    @booking.update(booking_params)
-    redirect_to robot_booking_path
+
   end
 
   private
