@@ -1,8 +1,20 @@
+.container-homepage {
 
-.body-home {
-  background-image: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669131989/duotone_bpxdee.png");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669131363/duotone_hpbjca.png") ;
   background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+
+  left: 1334px;
+  top: 125px;
 }
