@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  height: 70px;
+  height: 100px;
 }
 
 .navbar {
@@ -50,4 +50,8 @@ left: 1082px;
 top: 106px;
 color:rgba(52, 50, 50, 0.25);
 font-size: medium;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 120px;
 }
