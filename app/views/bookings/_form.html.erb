@@ -2,7 +2,7 @@
 <%= simple_form_for [@robot, @booking] do |f| %>
   <h2> Informations de réservations</h2>
   <br>
-  <%= f.input :date_first, as: :date %>
+  <%= f.input :date_first, as: :date, input_html: {class: "toto"} %>
   <%= f.input :date_end, as: :date %>
 
   <br>
