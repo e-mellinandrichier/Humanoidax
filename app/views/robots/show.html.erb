@@ -23,4 +23,5 @@
 <% @bookings.each do |booking| %>
   <h5> Début : <%= booking.date_first%> </h5>
   <h5> Fin :  <%= booking.date_end %> </h5>
+  <p class ="animated-link"><%= link_to "Edit booking", edit_booking_path(booking) %></p>
 <% end %>

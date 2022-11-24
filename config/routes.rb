@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root to: "robots#index"
   resources :robots do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, ]
   end
-  resources :bookings, only: [:destroy, :index, :show]
+  resources :bookings, only: [:destroy, :index, :show, :edit, :update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
