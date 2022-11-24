@@ -1,12 +1,12 @@
-
 <div class="banner">
+
   <div class="container1">
+    <h2> Avec Humanoïdax </h2>
+    <br>
 
-   <h2> Avec Humanoïdax </h2>
-   <br>
-   <h4> Partage ou emprunte ton robot </h4>
-   <br>
-
+    <h4> Partage ou emprunte ton robot </h4>
+    <br>
+    <br>
     <div class="search-barre">
       <%= form_with url: robots_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
@@ -18,27 +18,25 @@
       <% end %>
     </div>
   </div>
+
 </div>
 
 <div class="container2">
-
-
-<div class="card_container">
   <% @robots.each do |robot| %>
-
-          <div class="cards-products">
-          <h5> <%= robot.name.capitalize %> </h5>
-            <div class="card-product">
+        <div class="col-12 col-lg-6">
+           <h5> <%= robot.name.capitalize %> </h5>
             <%= link_to robot_path(robot), class: "mylink" do %>
+            <div class="card-product">
             <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
             </div>
+                <br>
                 <div class="card-product-infos">
                   <h6> <%= robot.utility.capitalize %> </h6>
                   <p> <%= robot.description.capitalize %> </p>
 
                 </div>
+          <% end %>
           </div>
-      <% end %>
     <% end %>
 </div>
 
