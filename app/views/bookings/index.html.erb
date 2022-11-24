@@ -2,7 +2,9 @@
 
 
 <% @bookings.each do |booking| %>
+  <h5> Ta réservation avec <%= booking.robot.name %></h5>
+  <%= cl_image_tag booking.robot.photo.key, height: 300, width: 400, crop: :fill, class:"show-img"%>
+  <h5> Début : <%= booking.date_first%> </h5>
+  <h5> Fin : <%= booking.date_end %> </h5>
 
-  <h5>  <%= booking.date_first%> </h5>
-  <h5>  <%= booking.date_end %> </h5>
 <% end %>
