@@ -39,7 +39,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to robot_path
+    redirect_to robot_path(@booking.robot)
   end
 
   private
