@@ -29,7 +29,8 @@
   font-size:xx-small;
 }
 .avatar {
-  width: 28px;
+  width: 60px;
+  margin: 20px;
 }
 
 .navbar-collapse {
@@ -53,4 +54,15 @@ font-size: medium;
 
 .navbar-lewagon .navbar-brand img {
   width: 120px;
+}
+
+.dropdown-menu {
+
+  background-color: #ff90e8;
+  border-radius: 12px;
+}
+
+.dropdown-item:hover {
+  color: $light-white;
+  background-color: black;
 }
