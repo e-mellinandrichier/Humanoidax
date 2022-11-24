@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:destroy, :index, :show, :edit, :update]
+  resources :pages, only: :index
 end
   # resources :bookings, only: [:destroy, :index, :show]
 

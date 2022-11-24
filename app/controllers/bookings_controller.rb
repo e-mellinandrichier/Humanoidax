@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.robot = set_robot
+    @booking.robot = Robot.find(params[:robot_id])
     if @booking.save
       redirect_to robot_path(@robot)
     else
