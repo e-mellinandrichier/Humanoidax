@@ -7,6 +7,7 @@
     <div class"show-ud">
       <h3><%= @robot.utility %></h3>
       <p> <%= @robot.description %> </p>
+      <p class ="animated-link"><%= link_to "Book this robot", new_booking_path(@robot) %></p>
     </div>
   </div>
 
