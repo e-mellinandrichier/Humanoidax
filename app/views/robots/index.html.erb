@@ -14,7 +14,16 @@
 
 <div class="container2">
 
-
+  <div class="search-barre">
+    <%= form_with url: robots_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find your robot"
+      %>
+      <%= submit_tag "Search", class: "animated-link" %>
+    <% end %>
+  </div>
 
 <div class="card_container">
   <% @robots.each do |robot| %>
