@@ -21,9 +21,11 @@
 </div>
 
 <div class="container2">
-   <%=link_to "Add a new Robot" , new_robot_path, class: "animated-link"%>
-  <div class="card_container">
-    <% @robots.each do |robot| %>
+
+
+<div class="card_container">
+  <% @robots.each do |robot| %>
+
           <div class="cards-products">
             <div class="card-product">
             <%= link_to robot_path(robot), class: "mylink" do %>
