@@ -14,7 +14,6 @@ class RobotsController < ApplicationController
 
   def show
     @bookings = Booking.all
-
   end
 
   def new
