@@ -20,7 +20,7 @@
   margin: 10px;
   h5{
     color: #ff90e8;
-    font-family: Lora;
+    font-family: 'Syne Mono', monospace;
   }
   h6 {
     font-size: 14px;
@@ -46,10 +46,20 @@
   color: black;
 }
 
+
 .mylink {
   text-decoration: none;
   margin-top: 12px;
   color: rgb(36, 34, 34);
+  :hover {
+    color: black !important;
+}
+ h6 {
+  font-size: 16px;
+ }
+ p {
+  font-size: 12px;
+ }
 }
 
 // @media(max-width: 768px) {
