@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root to: "robots#index"
   resources :robots do
+    resources :bookings, only: [:new, :create, ]
+  end
+  resources :bookings, only: [:destroy, :index, :show, :edit, :update]
     # resources :bookings, only: [:new, :create]
     resources :bookings, except: [:destroy, :update, :edit]
     end
