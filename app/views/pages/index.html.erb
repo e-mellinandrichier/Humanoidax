@@ -1,22 +1,36 @@
-<h1>Hello <%= @user.email %> ! </h1>
-<%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669131989/EM_LA_BELLE_sqrqgt.jpg" %>
-<h2>Tes Robots :
-<% @robots.each do |robot| %>
-          <div class="cards-products">
-            <div class="card-product">
-            <%= link_to robot_path(robot), class: "mylink" do %>
-            <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
+
+<div class="container-profile">
+  <div class="hello">
+  <h1>Hello <%= @user.email %> ! </h1>
+  <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669131989/EM_LA_BELLE_sqrqgt.jpg", class:"card-img-profile-picture"%>
+  </div>
+
+  <div class="h2">
+    <h2>Tes Robots :</h2>
+    <div class="card-container">
+      <% @robots.each do |robot| %>
+        <div class="robot-grid-item-profile">
+            <%= link_to robot_path(robot), class: "mylink-profile" do %>
+            <div class="card-product-profile">
+              <%= cl_image_tag robot.photo.key, height: 250, width: 250, crop: :fill, class:"card-img-profile" %>
             </div>
-                <div class="card-product-infos">
+                <br>
+                <div class="card-product-infos-profile">
                   <h5> <%= robot.name.capitalize %> </h5>
-                  <br>
                   <h6> <%= robot.utility.capitalize %> </h6>
                   <p> <%= robot.description.capitalize %> </p>
 
                 </div>
+          <% end %>
           </div>
-      <% end %>
     <% end %>
+  </div>
+  </div>
+</div>
+
+
+
+
 </h2>
 <h2> Tes réservations :</h2>
 <% @bookings.each do |booking| %>
