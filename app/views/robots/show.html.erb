@@ -1,23 +1,24 @@
-<div class="show-big-container">
+<div class="wrapper">
+  <div class="one">
+    <h1 class="typewriter"><%= @robot.name.capitalize %>,<%= @robot.utility.capitalize %></h1>
 
-  <h1><%= @robot.name %></h1>
-
-  <div class="show-container">
+  </div>
+  <div class="two">
     <%= cl_image_tag @robot.photo.key, height: 300, width: 400, crop: :fill, class:"show-img"%>
-    <div class"show-ud">
-      <h3><%= @robot.utility %></h3>
-      <p> <%= @robot.description %> </p>
-      <p class ="animated-link"><%= link_to "Book this robot", new_robot_booking_path(@robot) %></p>
-    </div>
   </div>
 
-  <p class ="animated-link"><%= link_to "Edit Robot", edit_robot_path(@robot) %></p>
-
-  <p class ="animated-link"><%= link_to "Back to Robots", robots_path %></p>
-  <p class ="animated-link"><%= link_to "Delete",
+  <div class="four">
+    <p class ="animated-link"><%= link_to "Book this robot", new_robot_booking_path(@robot) %></p>
+    <p class ="animated-link"><%= link_to "Edit Robot", edit_robot_path(@robot) %></p>
+    <p class ="animated-link"><%= link_to "Back to Robots", robots_path %></p>
+    <p class ="animated-link"><%= link_to "Delete",
     robot_path(@robot),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %></p>
+    %></p>
+  </div>
+  <div class="five">
+    <p> <%= @robot.description.capitalize %> <p>
+  </div>
 </div>
 
 <% @robot.bookings.each do |booking| %>
