@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="one">
-    <h1 class="typewriter"><%= @robot.name.capitalize %>,<%= @robot.utility.capitalize %></h1>
+    <h1 class="typewriter"><%= @robot.name.capitalize%>, <%= @robot.utility.capitalize %></h1>
 
   </div>
   <div class="two">
@@ -19,17 +19,22 @@
   <div class="five">
     <p> <%= @robot.description.capitalize %> <p>
   </div>
+
+  <div class="six">
+    <h2>Réservation </h2>
+    <% @robot.bookings.each do |booking| %>
+      <h5> Début <%= booking.date_first %> </h5>
+      <h5> Fin <%= booking.date_end %> </h5>
+  </div>
+  <div class="seven">
+    <p class ="animated-link" style ="width: 200px;"><%= link_to "Edit booking", edit_booking_path(booking) %></p>
+    <p class ="animated-link" style ="width: 200px;">
+
+    <%= link_to "Delete",
+      booking_path(booking),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    <% end %>
+    </p>
+  </div>
 </div>
-
-<% @robot.bookings.each do |booking| %>
-  <h5> Début : <%= booking.date_first %> </h5>
-  <h5> Fin :  <%= booking.date_end %> </h5>
-  <p class ="animated-link"><%= link_to "Edit booking", edit_booking_path(booking) %></p>
-  <p class ="animated-link">
-
-  <%= link_to "Delete",
-    booking_path(booking),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-<% end %>
-  </p>
