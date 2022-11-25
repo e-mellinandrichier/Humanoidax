@@ -1,10 +1,15 @@
-<h1>Mes réservations</h1>
+<div class="typewriter" id="resa-title">
+  <h1> Mes réservations</h1>
+</div>
 
+<div class="container-book">
+  <% @bookings.each do |booking| %>
+    <div class="booking-cards">
+      <h5> Ta réservation avec <%= booking.robot.name %></h5>
+      <%= cl_image_tag booking.robot.photo.key, height: 200, width: 300, crop: :fill, class:"show-img"%>
 
-<% @bookings.each do |booking| %>
-  <h5> Ta réservation avec <%= booking.robot.name %></h5>
-  <%= cl_image_tag booking.robot.photo.key, height: 300, width: 400, crop: :fill, class:"show-img"%>
-  <h5> Début : <%= booking.date_first%> </h5>
-  <h5> Fin : <%= booking.date_end %> </h5>
-
-<% end %>
+    <h5> Début : <%= booking.date_first%> </h5>
+    <h5> Fin : <%= booking.date_end %> </h5>
+  </div>
+  <% end %>
+</div>

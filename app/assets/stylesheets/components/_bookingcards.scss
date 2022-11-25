@@ -1,0 +1,28 @@
+.booking-cards {
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 13px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 474px;
+  background-color: #ff90e7;
+  padding: 20px;
+  .h5 {
+    font-size: 1.25rem;
+    padding-left: 15px;
+    font-family: 'Space Mono', monospace;
+   }
+
+}
+
+#resa-title {
+
+  margin-left: 90px;
+  font-family: 'Syne Mono', monospace;
+
+}
+
+.container-book{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
