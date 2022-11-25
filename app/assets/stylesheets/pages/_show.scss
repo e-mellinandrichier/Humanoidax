@@ -98,6 +98,23 @@ h1 {
   grid-row: 3 / 3;
   padding-left: 20px;
 }
+
+.six {
+  grid-column: 1/ 2;
+  grid-row: 4/ 4;
+  padding-left: 20px;
+}
+.six h2 {
+  color: black;
+  text-decoration: overline;
+  text-decoration-color: #ff90e8;
+}
+.seven {
+  grid-column: 2/ 2;
+  grid-row: 4/ 4;
+
+  width: fit-content;
+}
 .typewriter {
   color: #fff;
   font-family: monospace;
