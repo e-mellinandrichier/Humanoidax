@@ -1,23 +1,14 @@
 .container2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 36px;
   justify-content: center;
-  padding: 24px;
+  padding: 102px;
 }
 
-.col-12 {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: flex-start;
-  padding: 30px;
-  border-radius: 7px;
-  background-color: $light-white;
-  flex-direction: column;
-  width: 400px;
-  height: 500px;
-  margin: 10px;
+.robot-grid-item {
+  width: 100%;
+  padding: 15px;
   h5{
     color: #ff90e8;
     font-family: 'Syne Mono', monospace;
@@ -29,14 +20,16 @@
 }
 
 .card-img {
-  border-radius: 7px;
+  border-radius: 10px;
+
 }
+
 
 .cards-products h2 {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none !important;
-  color: $light-white;
+  color: rgb(54, 52, 52);
 }
 
 .cards-products-infos {
