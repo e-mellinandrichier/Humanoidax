@@ -12,9 +12,13 @@
   </head>
 
   <body>
-  <%= render "devise/shared/navbar", except: :home %>
+  <% unless action_name == "home" %>
+    <%= render "devise/shared/navbar" %>
+  <% end %>
     <%= yield %>
     <%= render "devise/shared/flashes" %>
   </body>
- <%= render "devise/shared/footer" %>
+  <% unless action_name == "home" %>
+    <%= render "devise/shared/footer" %>
+  <% end %>
 </html>
