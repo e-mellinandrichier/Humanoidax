@@ -34,7 +34,7 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    console
+
   end
 
   def update
