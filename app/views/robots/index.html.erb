@@ -23,14 +23,14 @@
 
 <div class="container2">
   <% @robots.each do |robot| %>
-        <div class="col-12 col-lg-6">
-           <h5> <%= robot.name.capitalize %> </h5>
+        <div class="robot-grid-item">
             <%= link_to robot_path(robot), class: "mylink" do %>
             <div class="card-product">
-            <%= cl_image_tag robot.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
+              <%= cl_image_tag robot.photo.key, height: 250, width: 250, crop: :fill, class:"card-img" %>
             </div>
                 <br>
                 <div class="card-product-infos">
+                  <h5> <%= robot.name.capitalize %> </h5>
                   <h6> <%= robot.utility.capitalize %> </h6>
                   <p> <%= robot.description.capitalize %> </p>
 
